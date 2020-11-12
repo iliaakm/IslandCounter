@@ -45,7 +45,7 @@ public class Controller : MonoBehaviour
             {
                 Cell cell = cells[x, y];
                 if (cell == null) continue;
-                if (cell.IsCheck || cell._cellType == CellType.Water) continue;
+                if (cell.IsCheck || cell._cellType == CellType.Water) continue;         //проверка
                 if (cell._cellType == CellType.Land)
                 {
                     islandCounter++;
