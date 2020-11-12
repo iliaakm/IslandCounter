@@ -66,6 +66,7 @@ public class Controller : MonoBehaviour
         if (x >= n || y >= m) return;
 
         if (cells[x, y].IsCheck || cells[x, y]._cellType == CellType.Water) return;    //проверка на повтор и воду
+        cells[x, y].Check();
         CheckCell(cells, x - 1, y);     //слева
         CheckCell(cells, x + 1, y);     //справа
         CheckCell(cells, x, y + 1);     //сверху
