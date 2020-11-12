@@ -29,7 +29,7 @@ public class Cell : MonoBehaviour
 
     public void Check()
     {
-        GetComponent<Image>().color = _colorChecked;
+        //GetComponent<Image>().color = _colorChecked;      //debug
         IsCheck = true;
     }
 }
