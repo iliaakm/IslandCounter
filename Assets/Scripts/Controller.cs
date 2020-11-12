@@ -18,11 +18,14 @@ public class Controller : MonoBehaviour
         for (int x = 0; x < n; x++)
             for (int y = 0; y < m; y++)
             {
+                Cell cell;
+                if (cells[x, y] != null) cell = cells[x, y];
+                else
+                    cell = Instantiate(_cellPref, _field, false).GetComponent<Cell>();
+
                 int dice = Random.Range(0, 2);
-                CellType type;
-                if (cells[x, y] == null)
-                    Cell cell = Instantiate(_cellPref, _field, false).GetComponent<Cell>();
-                    
+                CellType type = (dice == 0) ? CellType.Land : CellType.Water;       // 0 - суша, 1 - вода
+                cell.Generate(type);
             }
     }
 }
