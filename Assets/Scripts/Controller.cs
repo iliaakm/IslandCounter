@@ -27,5 +27,6 @@ public class Controller : MonoBehaviour
                 CellType type = (dice == 0) ? CellType.Land : CellType.Water;       // 0 - суша, 1 - вода
                 cell.Generate(type);
             }
+        print("done");
     }
 }
