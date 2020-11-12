@@ -24,6 +24,7 @@ public class Cell : MonoBehaviour
         Color color = _colorWater;
         if (type == CellType.Land) color = _colorLand;
         GetComponent<Image>().color = color;
+        IsCheck = false;
     }
 
     public void Check()
