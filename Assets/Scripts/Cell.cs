@@ -11,6 +11,7 @@ public enum CellType
 public class Cell : MonoBehaviour
 {
     public CellType _cellType { get; private set; }
+    public bool IsCheck;
 
     Color _colorWater = Color.blue;
     Color _colorLand = Color.green;
