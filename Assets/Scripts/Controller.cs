@@ -44,6 +44,7 @@ public class Controller : MonoBehaviour
             for (int y = 0; y < m; y++)
             {
                 Cell cell = cells[x, y];
+                if (cell == null) continue;
                 if (cell.IsCheck || cell._cellType == CellType.Water) continue;
                 if (cell._cellType == CellType.Land)
                 {
