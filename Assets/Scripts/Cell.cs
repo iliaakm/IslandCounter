@@ -15,6 +15,7 @@ public class Cell : MonoBehaviour
 
     Color _colorWater = Color.blue;
     Color _colorLand = Color.green;
+    Color _colorChecked = Color.red;
 
     public void Generate(CellType type)
     {
@@ -23,5 +24,11 @@ public class Cell : MonoBehaviour
         Color color = _colorWater;
         if (type == CellType.Land) color = _colorLand;
         GetComponent<Image>().color = color;
+    }
+
+    public void Check()
+    {
+        GetComponent<Image>().color = _colorChecked;
+        IsCheck = true;
     }
 }
